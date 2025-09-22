@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { ChevronRight, Menu, X } from 'lucide-react';
+import { ArrowRight, ChevronRight, Menu, MoveRight, X } from 'lucide-react';
+import './App.css';
 
 const App = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState('StartGlobal');
 
   const projects = [
-    { name: 'StartGlobal', link: '#' },
-    { name: 'Payper', link: '#' },
-    { name: 'Vipline', link: '#' },
-    { name: 'Matafy', link: '#' },
-    { name: 'Fleetsu', link: '#' }
+    { name: 'Plusmed', link: '#' },
+    { name: 'Langner', link: '#' },
+    { name: 'Funiro', link: '#' },
+    { name: 'Taskbolt', link: '#' },
+    // { name: 'Fleetsu', link: '#' }
   ];
 
   const highlights = [
@@ -104,15 +105,15 @@ const App = () => {
                   e.preventDefault();
                   setSelectedProject(project.name);
                 }}
-                className={`group flex items-center justify-between py-3 px-4 rounded-lg transition-all duration-200 ${
-                  selectedProject === project.name
-                    ? 'bg-black text-white'
-                    : 'hover:bg-gray-100'
+                className={`group flex items-center justify-between py-3 px-4 transition-all duration-200 border-b-2 border-gray-100 hover:border-black ${
+                selectedProject === project.name ? 'border-black border-b-2 font-bold text-black' 
+                : ' border-black border-b-2 text-gray-700'
                 }`}
               >
                 <span className="font-medium">{project.name}</span>
-                <ChevronRight 
+                <ArrowRight
                   size={16} 
+                  strokeWidth={3}
                   className={`transition-transform duration-200 ${
                     selectedProject === project.name
                       ? 'translate-x-1'
