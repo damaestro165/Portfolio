@@ -16,30 +16,30 @@ const App = () => {
     { 
       name: 'Plusmed', 
       description: 'Healthcare management platform',
-      tech: ['React', 'Node.js', 'MongoDB'],
-      link: '#',
-      image: 'https://via.placeholder.com/600x400/1a1a1a/ffffff?text=Plusmed'
+      tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Hugging Face API'],
+      link: 'https://plusmed.vercel.app/',
+      image: '/plusmed.png'
     },
     { 
       name: 'Langner', 
       description: 'Language learning application',
       tech: ['Next.js', 'TypeScript', 'Tailwind'],
-      link: '#',
-      image: 'https://via.placeholder.com/600x400/2a2a2a/ffffff?text=Langner'
+      link: 'https://langner.vercel.app/',
+      image: '/Langner.png'
     },
     { 
       name: 'Funiro', 
       description: 'E-commerce furniture store',
-      tech: ['React', 'Redux', 'Stripe API'],
-      link: '#',
-      image: 'https://via.placeholder.com/600x400/3a3a3a/ffffff?text=Funiro'
+      tech: ['React', 'Redux', 'Firebase' ],
+      link: 'https://funiro-three.vercel.app/',
+      image: '/funiro.png'
     },
     { 
       name: 'Taskbolt', 
       description: 'Project management tool',
-      tech: ['Vue.js', 'Express', 'PostgreSQL'],
-      link: '#',
-      image: 'https://via.placeholder.com/600x400/4a4a4a/ffffff?text=Taskbolt'
+      tech: ['React', 'Express'],
+      link: 'https://taskbolt.vercel.app/login',
+      image: '/taskbolt.png'
     },
   ];
 
@@ -58,7 +58,7 @@ const App = () => {
   ];
 
   const skills = [
-    { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux', 'Vue.js'] },
+    { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux', ] },
     { category: 'Backend', items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs', 'GraphQL'] },
     { category: 'Tools', items: ['Git', 'Docker', 'Webpack', 'Vite', 'Figma', 'VS Code'] },
   ];
@@ -257,7 +257,7 @@ const App = () => {
         <div className={`max-w-6xl mx-auto w-full transition-all duration-1000 ${
           visibleSections.has('about') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
         }`}>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-12">About Me</h2>
+          <h2 className="text-4xl font-bold mb-12">About Me</h2>
           
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -309,22 +309,28 @@ const App = () => {
       <section 
         id="works" 
         ref={worksRef}
-        className="min-h-screen py-20 px-6 lg:px-12"
+        className="min-h-screen py-16 px-6 lg:px-12"
       >
         <div className={`max-w-6xl mx-auto transition-all duration-1000 ${
           visibleSections.has('works') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
         }`}>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-12">Selected Works</h2>
+          <h2 className="text-4xl font-bold mb-12">Selected Works</h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:px-20 md:grid-cols-2 gap-8">
+
             {projects.map((project, index) => (
               <div 
                 key={project.name}
                 className="group relative overflow-hidden rounded-lg bg-gray-100 hover:shadow-2xl transition-all duration-500 animate-fadeInUp"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-500"></div>
+                <div className="aspect-[6/3] bg-gradient-to-br from-gray-200 to-gray-300 relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.name} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-500" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-4xl font-bold text-white/20 group-hover:scale-110 transition-transform duration-500">
                       {project.name}
@@ -380,10 +386,10 @@ const App = () => {
               className="px-8 py-4 bg-white text-black rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
             >
               <Mail size={20} />
-              hello@yomidev.com
+              adeniyiabayomi16@gmail.com
             </a>
             <a 
-              href="#"
+              href="https://docs.google.com/document/d/1UmDSmB8PoBUxjDPsfTDHsZzIDBfm01FmeLw77YrBqvM/edit?usp=sharing"
               className="px-8 py-4 border border-white rounded-lg hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2"
             >
               Download CV
