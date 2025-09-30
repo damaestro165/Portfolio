@@ -199,7 +199,7 @@ const App = () => {
       <section 
         id="home" 
         ref={homeRef}
-        className="min-h-screen flex flex-col lg:flex-row pt-20 relative"
+        className="min-h-screen flex flex-col lg:flex-row pt-20 lg:px-10 relative"
       >
         <div className={`flex-1 px-6 lg:px-12 py-12 lg:py-24 flex flex-col justify-center transition-all duration-1000 transform ${
           visibleSections.has('home') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
